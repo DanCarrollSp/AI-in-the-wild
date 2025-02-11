@@ -14,6 +14,7 @@
 #include "Hide.h"
 #include <iostream>
 #include <list>
+#include "Protect.h"
 
 using namespace std;
 
@@ -225,12 +226,12 @@ void Game::setupDroids()
 	//d2->setBrain(emptyBrain);
 	//d2->setColour(sf::Color::Green);
 
-	//// Example Droid with a simple Wander Behaviour
-	//Droid* d3 = new Droid("D3", 20, 3, 1000, 0, 3, gridWorld);
-	//Routine* wander3 = new Wander(gridWorld);
-	//d3->setBehaviour(wander3);
-	//d3->setBrain(emptyBrain);
-	//d3->setColour(sf::Color::Magenta);
+	// Example Droid with a simple Wander Behaviour
+	Droid* d3 = new Droid("D3", 20, 3, 1000, 0, 3, gridWorld);
+	Routine* wander3 = new Wander(gridWorld);
+	d3->setBehaviour(wander3);
+	d3->setBrain(emptyBrain);
+	d3->setColour(sf::Color::Magenta);
 
 	//// Example Droid with a Hide Behaviour
 	//Droid* d4 = new Droid("D4", (rand() % (int)gridWorld.gridSize) + 1, (rand() % (int)gridWorld.gridSize) + 1, 1000, 0, 3, gridWorld);
@@ -271,13 +272,28 @@ void Game::setupDroids()
 	//d7->setBrain(new CheckForAlarms()); //The Brain routine gets executed first.
 	//d7->setColour(sf::Color(39,215,205));
 
-	m_droids.push_back(d1);
+
+
+	//Protect Droid
+	//should get inbetween droid A and B  -  to protect A from B    ( protect yellow D1 from magenta D3)
+	//"Just like in the Excel exercise" so make it get into the closest protect possition from its current possiton 
+	Droid* d8 = new Droid("D6", 7, 3, 1000, 0, 3, gridWorld);
+	Routine* protect = new Protect(1, 3, gridWorld);//Protects D1 from D3
+	d8->setBehaviour(protect);
+	d8->setBrain(emptyBrain);
+	d8->setColour(sf::Color::Blue);
+
+
+
+
+	m_droids.push_back(d1);//Player controlled droid
 	//m_droids.push_back(d2);
-	//m_droids.push_back(d3);
+	m_droids.push_back(d3);//Wander droid
 	//m_droids.push_back(d4);
 	//m_droids.push_back(d5);
     //m_droids.push_back(d6);
 	//m_droids.push_back(d7);
+	m_droids.push_back(d8);//Protect droid
 	gridWorld.m_gridDroids = m_droids;	//So we can access them when inside the behaviours.
 
 	int x = gridWorld.getGridCellX(sf::Vector2i(400, 300));
