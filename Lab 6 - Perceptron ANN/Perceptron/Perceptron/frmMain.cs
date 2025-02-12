@@ -50,14 +50,43 @@ namespace Perceptron
             w1 = 1;
             w2 = 0.5;
 
-            // {
-            // Your code to update the weights here..
-            // You want to iterate through your update process 'maxIteration' times, applying the Perceptron Learning Rule and updating the weights.
-            // You can make use of the following to draw a line based on the new weights. (Weights w0, w1 and w2 are global).
-            // Do this within your loop so you can see the line converging on its correct position in the plane.
+
+            //Training loop
+            for (iterations = 0; iterations < maxIterations; iterations++)
+            {
+                error = false;
+
+                //Loop through all samples
+                foreach (var sample in samples)
+                {
+                    //Perceptron activation formula
+                    double output = w0 + w1 * sample.X1 + w2 * sample.X2;
+
+                    //If output is wrong, update the weights
+                    if ((output > 0 && sample.Class == -1) || (output <= 0 && sample.Class == 1))
+                    {
+                        //Misclasification, apply perceptron update rule
+                        w0 = w0 + eta * sample.Class;
+                        w1 = w1 + eta * sample.Class * sample.X1;
+                        w2 = w2 + eta * sample.Class * sample.X2;
+
+                        //Mark there was an error
+                        error = true;
+                    }
+                }
+
+                //If no error, training complete.
+                if (!error)
+                    break;
+
+                //Draws the updated line
+                objGraphics.Clear(Color.White);
+                DrawSeparationLine();
+            }
+
+            //Draws the final line after learning
             objGraphics.Clear(Color.White);
             DrawSeparationLine();
-            // }
         }
 
         private void picCanvas_MouseMove(object sender, MouseEventArgs e)

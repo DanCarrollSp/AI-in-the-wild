@@ -70,3 +70,13 @@ C:\AI4Games\Perceptron\Perceptron\obj\Debug\Perceptron.exe
 C:\AI4Games\Perceptron\Perceptron\obj\Debug\Perceptron.pdb
 C:\Users\danie\OneDrive\Desktop\Lab 6 - Perceptron ANN\Perceptron\Perceptron\obj\Debug\Perceptron.exe
 C:\Users\danie\OneDrive\Desktop\Lab 6 - Perceptron ANN\Perceptron\Perceptron\obj\Debug\Perceptron.pdb
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\obj\Debug\Perceptron.exe
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\obj\Debug\Perceptron.pdb
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\bin\Debug\Perceptron.exe.config
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\bin\Debug\Perceptron.exe
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\bin\Debug\Perceptron.pdb
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\obj\Debug\Perceptron.csproj.AssemblyReference.cache
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\obj\Debug\Perceptron.frmMain.resources
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\obj\Debug\Perceptron.Properties.Resources.resources
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\obj\Debug\Perceptron.csproj.GenerateResource.cache
+C:\Users\fondo\Desktop\AI-in-the-wild\Lab 6 - Perceptron ANN\Perceptron\Perceptron\obj\Debug\Perceptron.csproj.CoreCompileInputs.cache
