@@ -293,11 +293,11 @@ void Game::update(float dt)
 				//				myTrainingfile << tempString;
 				if (population.birdSet[b].jump)
 				{
-					tempString = tempString + ",flap";
+					tempString = tempString + ",1";
 					//					myTrainingfile << ",flap\n";
 				}
 				else
-					tempString = tempString + ",glide";
+					tempString = tempString + ",0";
 				//myTrainingfile << ",glide\n";
 
 				std::cout << tempString << std::endl;
@@ -324,7 +324,7 @@ void Game::update(float dt)
 		string tempString = "";
 		tempString = to_string(pillarSet[index].x) + "," + to_string(pillarSet[index].upperH) + "," + to_string(pillarSet[index].lowerY);
 		tempString = tempString + "," + to_string(population.birdSet[0].x) + "," + to_string(population.birdSet[0].y);
-		tempString = tempString + (population.birdSet[0].jump ? ",flap" : ",glide");
+		tempString = tempString + (population.birdSet[0].jump ? ",1" : ",0");
 		std::cout << tempString << std::endl;
 
 	}
